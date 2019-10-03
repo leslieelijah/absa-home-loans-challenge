@@ -1,0 +1,13 @@
+<div *ngIf="seriesFeed">
+    <div class="row">
+        <h3>Series</h3>
+        <div *ngFor="let series of seriesList">
+            <div *ngIf="series.programType === 'series'">
+                {{ series.title }}
+
+            </div>
+            <p>{{ series.length }}</p>
+        </div>
+            
+    </div>
+</div>

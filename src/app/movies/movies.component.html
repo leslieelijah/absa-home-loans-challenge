@@ -1,0 +1,14 @@
+<div *ngIf="moviesList">
+        <div class="row">
+            <h3>Movies</h3>
+            <div *ngFor="let movie of moviesList">
+                <div *ngIf="movie.programType === 'movies'">
+                    {{ series.title }}
+    
+                </div>
+                <p>{{ series.length }}</p>
+            </div>
+                
+        </div>
+    </div>
+    

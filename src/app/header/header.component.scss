@@ -1,0 +1,42 @@
+header {
+    background-color: deepskyblue;
+    padding: 1.5em;
+    color: #FFF;
+
+    .nav {
+        padding: 0em 1.5em;
+
+        .title {
+            font-size: 2em;
+            font-weight: bold;
+            display: inline-block;
+            clear:right;
+        }
+
+        .login {
+            display: inline-block;
+            clear:right;
+            color:#FFF;
+
+            a {
+                text-decoration:none;
+            }
+        }
+
+        .start-free-trail {
+            
+            color: #FFF;
+            display: inline-block;
+            clear:right;
+
+            .btn {
+                background-color: #222;
+                color: #fff;
+                padding: .75em;
+                border: none;
+                font-size: 1em;
+            }
+        }
+    }
+    
+}

@@ -1,0 +1,80 @@
+.footer {
+    padding: 0em;
+    .links {
+        padding: 0em;
+        ul {
+            padding-left: 0em;
+            li {
+                display: inline;
+                list-style: none;
+                color: #FFF;
+                text-decoration: none;
+
+                a {
+                    text-decoration: none;
+                    color: #FFF;
+                    padding-right: .5em;
+                }
+            }
+
+            li:nth-of-type(2n) {
+                display: inline;
+                list-style: none;
+                
+                padding-left: .5em;
+                padding-right: .5em;
+                a {
+                    color: #FFF;
+                    text-decoration: none;
+                }
+            }
+     }
+    }
+    .copyright {
+        color: #FFF;
+        font-size: .75em;
+    }
+
+    .socials {
+        display: block;
+        clear: both;
+        .social-icons {
+            float: left;
+            clear: right;
+            ul{
+                padding-left: 0em; 
+            li {
+                display: inline;
+                list-style: none;
+                color: #FFF;
+                text-decoration: none;
+                padding-right: .75em;
+                    a {
+                        color: #FFF;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    
+        .app-store {
+            float: right;
+            ul {
+                padding-left: 0em;
+                li {
+                    display: inline;
+                    list-style: none;
+                    color: #FFF;
+                    text-decoration: none;
+                    padding-right: .75em;
+                        a {
+                            color: #FFF;
+                            text-decoration: none;
+                        }
+                }
+            }
+        }
+    }
+    
+    
+}
