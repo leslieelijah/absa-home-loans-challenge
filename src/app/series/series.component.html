@@ -1,13 +1,19 @@
-<div *ngIf="seriesFeed">
-    <div class="row">
-        <h3>Series</h3>
-        <div *ngFor="let series of seriesList">
-            <div *ngIf="series.programType === 'series'">
-                {{ series.title }}
+<section>
+    <article>
+        <div class="series">
+            <h3>Series</h3>
 
+            <div *ngFor="let series of seriesFeed">
+                <div *ngIf="series.programType === 'series'">
+                    <div class="series-box">
+                        <h4>{{series.title }}</h4>
+                        <img src="{{series.images['Poster Art']['url']}}" width="200" height="250" />
+                        <h5>{{series.programType}}</h5>
+                        <p>{{ series.description }}</p>
+                    </div>  
+                </div>
             </div>
-            <p>{{ series.length }}</p>
         </div>
-            
-    </div>
-</div>
+    </article>
+</section>
+

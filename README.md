@@ -11,12 +11,12 @@ Install the packages
 Run if all is fine
     ng serve
 
-Run tests
-    ng test
-    ng e2e 
 
-# Ngx Loader or skeleton loader
-    - added the package for any skeleton laoding
+# Between working and doing the test it would have been easier if I used bootstrap not my own freestyle to do the Styling as that could have save lots of time,
 
-# Using SCSS for styling
+# I wanted to use to nodejs to get the json response and serve it ong the web app
+
+# Used minimum RxJs and state management because this is simple to do without
+
+# Please let me know of any feedback
 

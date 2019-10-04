@@ -1,0 +1,51 @@
+article {
+    width: 100%;
+    float: left;
+    clear: both;
+    display: inline-grid;
+    margin-bottom: 1em;
+    background-color: #FFF;
+
+    .movies {
+        padding: 1em 0em 1em 2.8em;
+        float: left;
+        clear: right;
+
+        h3 {
+            font-size: 2em;
+            margin-top: 0.5em;
+            }
+
+        .movies-box {
+            width: 200px;
+            text-align: center;
+            float: left;
+            margin-right: 2em;
+            margin-top: 1em;
+
+            h4 {
+                color: deepskyblue;
+                margin: 0em;
+                padding: 0em 0em 1em;
+                text-align: left;
+                font-weight: bold;
+                height: 2em;
+                font-size: 1.2em;
+            }
+
+            h5 {
+                text-align: left;
+                text-transform: capitalize;
+                font-size: 1.15em;
+                margin: 15px 0px;
+                }
+                
+            p {
+                text-align: justify;
+                font-size:.85em;
+            }
+
+
+        }
+    }
+}

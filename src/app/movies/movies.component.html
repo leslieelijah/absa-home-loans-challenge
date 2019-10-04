@@ -1,14 +1,23 @@
-<div *ngIf="moviesList">
-        <div class="row">
+<section>
+    <article>
+        <div class="movies">
             <h3>Movies</h3>
-            <div *ngFor="let movie of moviesList">
-                <div *ngIf="movie.programType === 'movies'">
-                    {{ series.title }}
-    
-                </div>
-                <p>{{ series.length }}</p>
-            </div>
+
+            <div *ngFor="let movies of moviesFeed">
+
                 
+                <div *ngIf="movies.programType === 'movie'">
+                        
+                    <div class="movies-box">
+                        <h4>{{ movies.title }}</h4>
+                        <img src="{{ movies.images['Poster Art']['url'] }}" width="200" height="250" />
+                        <h5>{{ movies.programType }}</h5>
+                        <p>{{ movies.description }}</p>
+                    </div>
+                    
+                </div>
+            </div>
+
         </div>
-    </div>
-    
+    </article>
+</section>  

@@ -1,3 +1,14 @@
-<div id="wrap" *ngIf="seriesAndMovies">
-  <app-pages [seriesAndMovies]="seriesAndMovies"></app-pages>
-</div>
+<app-header></app-header>
+
+<section>
+    <article>
+        <div class="">
+            <h3>
+                <router-outlet></router-outlet>
+            </h3>
+        </div>
+    </article>
+</section>
+
+
+<app-footer></app-footer>
