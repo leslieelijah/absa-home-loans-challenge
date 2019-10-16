@@ -17,7 +17,7 @@ export class MoviesComponent implements OnInit {
 
     this.moviesList = this.feedService.getFeed().subscribe(
       (movies) => {
-       return this.moviesFeed = movies.entries, this.moviesFeed.sort();
+       return this.moviesFeed = movies.entries;
       },
       shareReplay(1)
     );

@@ -22,7 +22,6 @@ export class SeriesComponent implements OnInit {
     this.serieslist = this.feedService.getFeed().subscribe(
       (series) => {
         return this.seriesFeed = series.entries;
-        this.seriesFeed.sort();
       },
       shareReplay(1),
     );
