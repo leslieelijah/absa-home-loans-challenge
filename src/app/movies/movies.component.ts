@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { FeedApiService } from '../service/feed-api.service';
+import { map, shareReplay } from 'rxjs/operators';
 
 @Component({
   selector: 'app-movies',
@@ -7,18 +8,18 @@ import { FeedApiService } from '../service/feed-api.service';
   styleUrls: ['./movies.component.scss']
 })
 export class MoviesComponent implements OnInit {
-  public moviesFeed: any;
-  public moviesList: any;
+  public moviesFeed: any = [];
+  public moviesList: any = [];
 
-  constructor(private feed: FeedApiService) { }
+  constructor(private feedService: FeedApiService) { }
 
   ngOnInit() {
 
-    this.moviesList = this.feed.getSeriesAndMovies();
-
-    this.moviesFeed = this.moviesList.entries.map((item: any) => {
-      return item;
-    });
+    this.moviesList = this.feedService.getFeed().subscribe(
+      (movies) => {
+       return this.moviesFeed = movies.entries, this.moviesFeed.sort();
+      },
+      shareReplay(1)
+    );
   }
-
 }

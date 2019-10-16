@@ -1,9 +1,9 @@
 <section>
-    <article>
+    <article *ngIf="moviesFeed">
         <div class="movies">
             <h3>Movies</h3>
 
-            <div *ngFor="let movies of moviesFeed; index as i;">
+            <div *ngFor="let movies of moviesFeed; index as i; ">
                 <div *ngIf="movies.programType === 'movie' && movies.releaseYear >= 2010">
                         
                     <div class="movies-box">

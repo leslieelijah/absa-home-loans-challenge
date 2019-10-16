@@ -1,5 +1,10 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { FeedApiService } from '../service/feed-api.service';
+import { map, take, tap, shareReplay } from 'rxjs/operators';
+import { MoviesComponent } from '../movies/movies.component';
+import { Observable } from 'rxjs/internal/Observable';
+import { MoviesAndSeriesFeed, Entries } from '../models/movies-and-series-feed';
+import { VirtualTimeScheduler } from 'rxjs';
 
 @Component({
   selector: 'app-series',
@@ -7,18 +12,20 @@ import { FeedApiService } from '../service/feed-api.service';
   styleUrls: ['./series.component.scss'],
 })
 export class SeriesComponent implements OnInit {
-  public seriesAndMovies: any;
-
+  public seriesAndMovies$: Observable<Entries[]>;
+  public serieslist: any;
   public seriesFeed: any;
 
-  constructor(private feed: FeedApiService) { }
+  constructor(private feedService: FeedApiService) { }
 
   ngOnInit() {
-    this.seriesAndMovies = this.feed.getSeriesAndMovies();
-    this.seriesFeed = this.seriesAndMovies.entries.map((item: any) => {
-      return item;
-    });
-    console.log(this.seriesFeed);
+    this.serieslist = this.feedService.getFeed().subscribe(
+      (series) => {
+        return this.seriesFeed = series.entries;
+        this.seriesFeed.sort();
+      },
+      shareReplay(1),
+    );
   }
 
 }
